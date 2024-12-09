@@ -1,9 +1,13 @@
 import './App.css';
+import HomePage from './Home/HomePage';
 import { Navbar } from './Navbar/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <div className="flex flex-col"> 
+          <Navbar></Navbar>
+          <HomePage></HomePage>
+      </div>
     </div>
   );
 }
