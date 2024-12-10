@@ -5,11 +5,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        // logo colors
-        'custom-1': '#3A2A76',
-        'custom-2': '#335CAD', 
+      minHeight: {
+        '128': '32rem',
       },
+    colors: {
+        // logo colors
+        'custom-1': '#382E7A',
+        'custom-2': '#205A8A', 
+      },
+    },
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'], 
     },
   },
   plugins: [],

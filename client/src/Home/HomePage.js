@@ -1,12 +1,12 @@
 import React from 'react'
-import ImageSlider from './ImageSlider'
+import Carousel from './Carousel'
+import { Navbar } from '../Navbar/Navbar'
 export default function HomePage() {
   return (
-    <div >
-     
-        <ImageSlider></ImageSlider>
-
-
+    <div 
+    className='flex flex-col'> 
+        <Navbar></Navbar>
+        <Carousel></Carousel>
     </div>
   )
 }
