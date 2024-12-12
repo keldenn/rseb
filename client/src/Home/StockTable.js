@@ -27,7 +27,7 @@ export default function StockTable({tableName, data, rowsNumber}) {
     };
   
     return (
-      <div className='bg-green-500 border border-yellow-500 '>
+      <div className='m-5'>
           <table className="w-1/3 text-xs text-left text-gray-500 dark:text-gray-400 mx-auto">
           <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -63,7 +63,7 @@ export default function StockTable({tableName, data, rowsNumber}) {
           </tbody>
         </table>
   
-        <div className="flex justify-between bg-red-500 items-center px-6 py-4 w-[100%]  mx-auto">
+        <div className="flex justify-between  items-center px-6 py-4 w-[100%]  mx-auto">
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Page <span className="font-medium">{currentPage}</span> of {totalPages}
           </p>

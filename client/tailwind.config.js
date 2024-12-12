@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -12,6 +13,7 @@ module.exports = {
         // logo colors
         'custom-1': '#382E7A',
         'custom-2': '#205A8A', 
+        'custom-3': '#7E3BF2', 
       },
     },
     fontFamily: {
