@@ -4,11 +4,14 @@ import ApexCharts from 'apexcharts';
 const StockChart = () => {
   useEffect(() => {
     const options = {
-      colors: ["#1A56DB", "#FDBA8C"],
+      legend: {
+        show: true
+      },
+     
       series: [
         {
-          name: "Organic",
-          color: "#1A56DB",
+          name: "Price",
+          color: "#F40000",
           data: [
             { x: "Mon", y: 231 },
             { x: "Tue", y: 122 },
@@ -18,20 +21,7 @@ const StockChart = () => {
             { x: "Sat", y: 323 },
             { x: "Sun", y: 111 },
           ],
-        },
-        {
-          name: "Social media",
-          color: "#FDBA8C",
-          data: [
-            { x: "Mon", y: 232 },
-            { x: "Tue", y: 113 },
-            { x: "Wed", y: 341 },
-            { x: "Thu", y: 224 },
-            { x: "Fri", y: 522 },
-            { x: "Sat", y: 411 },
-            { x: "Sun", y: 243 },
-          ],
-        },
+        }
       ],
       chart: {
         type: "area",
@@ -65,9 +55,10 @@ const StockChart = () => {
         },
       },
       stroke: {
-        show: true,
-        width: 0,
-        colors: ["transparent"],
+        curve: 'smooth',
+        // show: true,
+        // width: 0,
+        // colors: ["transparent"],
       },
       grid: {
         show: false,
@@ -161,13 +152,12 @@ const StockChart = () => {
         <p class="text-sm font-normal text-gray-500 dark:text-gray-400">BHUTAN NATIONAL BANK LTD.</p>
       </div>
     </div>
-    <div>
-      <span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
-        <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
-        </svg>
-        42.5%
-      </span>
+    <div
+      class="flex items-center px-2.5 py-0.5 text-2xl font-semibold text-green-500 dark:text-green-500 text-center">
+      12%
+      <svg class="w-3 h-5 ms-1 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+      </svg>
     </div>
   </div>
 
@@ -220,7 +210,7 @@ const StockChart = () => {
         <a
           href="#"
           class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
-          Leads Report
+          Tell me more
           <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
           </svg>

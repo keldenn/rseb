@@ -22,21 +22,21 @@ const [tableData, setTableData] = useState([
 
   return (
 
-    <div className="flex xl:container xl:mx-auto overflow-x-auto relative  my-7 h-fit">
-      
-        <div className="flex-inital w-3/4  ">
+    <div className="flex flex-wrap xl:container xl:mx-auto overflow-x-auto relative  my-7 h-fit">
+        <div className="flex-initial w-full lg:w-3/4 border ">
         <div className="flex flex-col">
+          {/* search and tittle */}
             <div className='mt-5 mx-5'>
                 <div className="flex flex-row items-center justify-between ">
                   <div>
                     <h1 className='text-xl font-bold dark:text-whited me-3'>Stock Overview</h1>
                   </div>
-                  <div className='flex flex-row items-center'>
+                  {/* <div className='flex flex-row items-center'>
                     <button type="button" class="text-custom-1 bg-white border border-custom-1  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Live Feed</button>
                     <button type="button" class="text-grey-900 bg-white border border-grey-900  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Historical</button>
-                  </div>
+                  </div> */}
                 
-               
+              
                 {/* Search bar */}
                 <form class="max-w-sm w-full mx-auto m-2">   
                   <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -54,17 +54,19 @@ const [tableData, setTableData] = useState([
                 </div>
             </div>
             {/* Table and Graph */}
-            <div className="flex">
-                <StockTable data={tableData} rowsNumber={9}></StockTable>
-                <StockChart></StockChart>
-
-
+            <div className="flex flex-wrap">
+                <div className="flex-initial w-full md:w-1/3 border ">
+                  <StockTable data={tableData} rowsNumber={9}></StockTable>
+                </div>
+                <div className="flex-initial w-full md:w-2/3 border ">
+                  <StockChart></StockChart>
+                </div>
+                
             </div>
-            
         </div>
 
         </div>
-        <div className="flex-initial  w-1/4">
+        <div className="flex-initial w-full lg:w-1/4">
         {/* Dropdown Group */}
               <div className='p-5'>
                     <button  class="text-dark w-full border border-gray-200 hover:bg-custom-1 hover:text-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-custom-1 dark:focus:ring-custom-1" type="button">
@@ -149,8 +151,6 @@ const [tableData, setTableData] = useState([
             </div>
             <StockTable data={tableData} rowsNumber={5}></StockTable>
         </div>
-      
-       
     </div>
   )
 }
