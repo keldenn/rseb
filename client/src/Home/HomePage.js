@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from './Carousel'
 import { Navbar } from '../Navbar/Navbar'
+import TopStocks from './TopStocks'
 import StockOverview from './StockOverview'
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
         <Navbar></Navbar>
         <Carousel></Carousel>
         <StockOverview></StockOverview>
+      <TopStocks></TopStocks>
     </div>
   )
 }

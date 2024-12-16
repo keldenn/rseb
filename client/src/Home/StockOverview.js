@@ -23,20 +23,18 @@ const [tableData, setTableData] = useState([
   return (
 
     <div className="flex flex-wrap xl:container xl:mx-auto overflow-x-auto relative  my-7 h-fit">
-        <div className="flex-initial w-full lg:w-3/4 border ">
+        <div className="flex-initial w-full lg:w-3/4 ">
         <div className="flex flex-col">
           {/* search and tittle */}
-            <div className='mt-5 mx-5'>
-                <div className="flex flex-row items-center justify-between ">
-                  <div>
+            <div className=''>
+                <div className="flex flex-row m">
+                  <div className='max-w-sm w-full mx-auto m-2'>
                     <h1 className='text-xl font-bold dark:text-whited me-3'>Stock Overview</h1>
                   </div>
                   {/* <div className='flex flex-row items-center'>
                     <button type="button" class="text-custom-1 bg-white border border-custom-1  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Live Feed</button>
                     <button type="button" class="text-grey-900 bg-white border border-grey-900  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Historical</button>
                   </div> */}
-                
-              
                 {/* Search bar */}
                 <form class="max-w-sm w-full mx-auto m-2">   
                   <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -55,10 +53,10 @@ const [tableData, setTableData] = useState([
             </div>
             {/* Table and Graph */}
             <div className="flex flex-wrap">
-                <div className="flex-initial w-full md:w-1/3 border ">
+                <div className="flex-initial w-full md:w-1/3 ">
                   <StockTable data={tableData} rowsNumber={9}></StockTable>
                 </div>
-                <div className="flex-initial w-full md:w-2/3 border ">
+                <div className="flex-initial w-full md:w-2/3 ">
                   <StockChart></StockChart>
                 </div>
                 
@@ -149,7 +147,7 @@ const [tableData, setTableData] = useState([
             <div>
               <h1 className='text-xl font-bold dark:text-white ms-5'>Stock Available</h1>
             </div>
-            <StockTable data={tableData} rowsNumber={5}></StockTable>
+            <StockTable data={tableData} rowsNumber={4}></StockTable>
         </div>
     </div>
   )
