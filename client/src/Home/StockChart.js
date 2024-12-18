@@ -105,7 +105,7 @@ const StockChart = () => {
       const chart = new ApexCharts(chartElement, options);
       chart.render();
       return () => {
-        chart.destroy(); // Clean up the chart on unmount
+        chart.destroy(); 
       };
     }
   }, []);
@@ -117,13 +117,13 @@ const StockChart = () => {
     <div class="flex items-center">
       <div class="w-12 h-12 rounded-lg bg-white-100 dark:bg-gray-700 flex items-center justify-center me-3">
         <svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlnsXlink="http://www.w3.org/1999/xlink"
-  width={50}
-  height={47}
-  viewBox="0 0 50 47"
-  fill="none"
->
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          width={50}
+          height={47}
+          viewBox="0 0 50 47"
+          fill="none"
+        >
   <rect width={50} height={47} fill="url(#pattern0_2282_1785)" />
   <defs>
     <pattern
