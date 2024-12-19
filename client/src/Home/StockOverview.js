@@ -29,7 +29,7 @@ const [tableData, setTableData] = useState([
             <div className=''>
                 <div className="flex flex-row m">
                   <div className='max-w-sm w-full mx-auto m-2'>
-                    <h1 className='text-xl font-bold dark:text-whited me-3'>Stock Overview</h1>
+                    <h1 className='text-xl font-bold dark:text-whited ms-4 me-3'>Stock Overview</h1>
                   </div>
                   {/* <div className='flex flex-row items-center'>
                     <button type="button" class="text-custom-1 bg-white border border-custom-1  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Live Feed</button>

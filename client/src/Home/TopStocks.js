@@ -46,7 +46,15 @@ export default function TopStocks() {
   return (
     <div className="xl:container xl:mx-auto ">
       <div className="p-6">
-        <h2 className="text-2xl font-bold text-white-700 mb-6">Top Stocks</h2>
+      <div className="flex justify-between items-center mb-6">
+      <h2 className="text-2xl font-bold text-gray-700">Stocks</h2>
+        <a
+          href="/news"
+          className="text-blue-500 hover:underline text-sm font-medium"
+        >
+          All Stocks
+        </a>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {formattedStockData.map((stock, index) => (
             <div

@@ -20,7 +20,7 @@ const TopChart = ({ title, users, percentage, data, categories, buttonLabel }) =
       dataLabels: { enabled: false },
       stroke: { width: 2 },
       grid: { show: false },
-      series: [{ name: title, data, color: "#FFFFFF" }],
+      series: [{ name: "Price", data, color: "#FFFFFF" }],
       xaxis: {
         categories,
         labels: { show: false },
@@ -46,10 +46,10 @@ const TopChart = ({ title, users, percentage, data, categories, buttonLabel }) =
   }, [title, data, categories]);
 
   return (
-    <div className="w-full dark:bg-gray-800 dark:text-white">
     
+    <div className="w-full dark:bg-gray-800 dark:text-white">
+
       <div id={`area-chart-${title.replace(/\s+/g, '-')}`}></div>
-     
     </div>
   );
 };
