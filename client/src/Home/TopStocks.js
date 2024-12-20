@@ -47,7 +47,7 @@ export default function TopStocks() {
     <div className="xl:container xl:mx-auto ">
       <div className="p-6">
       <div className="flex justify-between items-center mb-6">
-      <h2 className="text-2xl font-bold text-gray-700">Stocks</h2>
+      <h2 className="text-2xl font-bold text-gray-700">Top Stocks</h2>
         <a
           href="/news"
           className="text-blue-500 hover:underline text-sm font-medium"

@@ -28,7 +28,7 @@ const LogoSection = () => {
   };
 
   return (
-    <div className="w-full md:container md:mx-auto overflow-hidden bg-white py-6">
+    <div className="w-full xl:container xl:mx-auto overflow-hidden bg-white py-6">
       <motion.div
         className="flex gap-8"
         style={{ display: "flex", whiteSpace: "nowrap" }}
