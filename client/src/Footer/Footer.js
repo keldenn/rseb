@@ -107,43 +107,27 @@ export default function Footer() {
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">RSEBL</a>. All Rights Reserved.
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 RSEBL. All Rights Reserved.
             </span>
             <div class="flex mt-4 sm:justify-center sm:mt-0">
-                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="sr-only">Facebook</span>
-                </a>
-                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">                      
-                        <svg
-                            className="w-4 h-4"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
-                            fill="currentColor"
-                            height="800px"
-                            width="800px"
-                            version="1.1"
-                            id="Layer_1"
-                            viewBox="0 0 461.001 461.001"
-                            xmlSpace="preserve"
-                        >
-                    <g>
-                        <path
-                        style={{ fill: "#F61C0D" }}
-                        d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728   c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137   C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607   c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"
-                        />
-                    </g>
-                    </svg>
-                    <span class="sr-only">Youtube</span>
-                </a>
-                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="sr-only">Twitter</span>
-                </a>
+            <a href="#" className="text-gray-500 hover:text-custom-1 dark:hover:text-white ms-5">                      
+            <svg style={{ fill: "#4267B2" }} className="w-7 h-7" xmlns="http://www.w3.org/2000/svg"  height="800px" width="800px" viewBox="0 0 50 50">
+                <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+            </svg>
+                <span className="sr-only">Facebook</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-custom-1 dark:hover:text-white ms-5">                      
+            <svg style={{ fill: "#FF0000" }} className="w-7 h-7" xmlns="http://www.w3.org/2000/svg"   height="800px" width="800px"  viewBox="0 0 50 50">
+            <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"></path>
+            </svg>
+                <span class="sr-only">Youtube</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-custom-1 dark:hover:text-white ms-5">
+                <svg className="w-7 h-7"  xmlns="http://www.w3.org/2000/svg"  height="800px" width="800px" viewBox="0 0 50 50">
+                <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
+                </svg>
+                <span class="sr-only">Twitter</span>
+            </a>
 
             </div>
         </div>

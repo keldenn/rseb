@@ -1,29 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const LogoSection = () => {
   const logos = [
-    "https://rsebl.org.bt/online/assets/img/companies/BBPL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/BCCL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/BFAL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/BIL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/BNB.png",
-    "https://rsebl.org.bt/online/assets/img/companies/BPCL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/BTCL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/KCL.png",
-    "https://rsebl.org.bt/online/assets/img/companies/RICB.png",
-    "https://rsebl.org.bt/online/assets/img/companies/TBL.png",
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BBPL.png", link: "https://example.com/bbpl" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BCCL.png", link: "https://example.com/bccl" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BFAL.png", link: "https://example.com/bfal" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BIL.png", link: "https://example.com/bil" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BNB.png", link: "https://example.com/bnb" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BPCL.png", link: "https://example.com/bpcl" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/BTCL.png", link: "https://example.com/btcl" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/KCL.png", link: "https://example.com/kcl" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/RICB.png", link: "https://example.com/ricb" },
+    { url: "https://rsebl.org.bt/online/assets/img/companies/TBL.png", link: "https://example.com/tbl" },
   ];
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const scrollAnimation = {
     animate: {
-      x: [0, -100 * logos.length], // Moves the logos across the screen
+      x: isHovered ? 0 : [0, -100 * logos.length], // Stops animation on hover
     },
     transition: {
-      repeat: Infinity, // Infinite loop
+      repeat: Infinity,
       repeatType: "loop",
-      duration: 10, // Animation duration
-      ease: "linear", // Smooth scrolling
+      duration: 10,
+      ease: "linear",
     },
   };
 
@@ -37,12 +39,20 @@ const LogoSection = () => {
       >
         {/* Render the logos twice for seamless looping */}
         {logos.concat(logos).map((logo, index) => (
-          <img
+          <a
             key={index}
-            src={logo}
-            alt={`Company logo ${index + 1}`}
-            className="h-20 w-auto object-contain"
-          />
+            href={logo.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={() => setIsHovered(true)} // Pause on hover
+            onMouseLeave={() => setIsHovered(false)} // Resume on hover out
+          >
+            <img
+              src={logo.url}
+              alt={`Company logo ${index + 1}`}
+              className="h-20 w-auto object-contain cursor-pointer"
+            />
+          </a>
         ))}
       </motion.div>
     </div>
