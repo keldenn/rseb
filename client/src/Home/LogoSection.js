@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import "tailwindcss/tailwind.css";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const logos = [
   { url: "https://rsebl.org.bt/online/assets/img/companies/BBPL.png", link: "https://example.com/bbpl" },
@@ -16,57 +15,46 @@ const logos = [
 ];
 
 const LogoSection = () => {
-  const controls = useAnimation();
-  const animationRef = useRef({ xOffset: 0 });
-
-  const handleMouseEnter = () => {
-    // Stop the animation and store the current position
-    controls.stop();
-  };
-
-  const handleMouseLeave = () => {
-    // Continue the animation from the last known position
-    controls.start({ 
-      x: [animationRef.current.xOffset, -1000], 
-      transition: { repeat: Infinity, duration: 10, ease: "linear" } 
-    });
-  };
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="overflow-hidden relative xl:container xl:mx-auto h-fit p-5">
-      <motion.div
-        className="flex w-max"
-        animate={controls}
-        initial={{ x: 0 }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onAnimationUpdate={({ x }) => {
-          // Update the current position of the animation on each frame
-          animationRef.current.xOffset = x;
-        }}
-      >
-        {logos.concat(logos).map((logo, index) => (
-          <motion.div
-            key={index}
-            className="flex items-center justify-center mx-4 relative group"
-            whileHover={{ scale: 1.2 }}
-          >
-            <img
-              src={logo.url}
-              alt={`Logo ${index + 1}`}
-              className="h-16 w-16 object-contain"
-            />
-            <a
-              href={logo.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 text-white font-medium transition-opacity group-hover:opacity-100"
-            >
-              Visit
-            </a>
-          </motion.div>
-        ))}
-      </motion.div>
+    <div className="xl:container xl:mx-auto p-5">
+
+      <div className="flex relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-10 before:bg-gradient-to-r before:from-zinc-950 before:to-transparent before:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-10 after:bg-gradient-to-l after:from-zinc-950 after:to-transparent after:content-['']">
+        <motion.div
+          transition={{
+            duration: 10,
+            ease: 'linear',
+            repeat: Infinity,
+          }}
+          initial={{ translateX: 0 }}
+          animate={{ translateX: isHovered ? -1 : '-10%' }}
+          onHoverStart={() => setIsHovered(true)} // Stop animation when hover starts
+          onHoverEnd={() => setIsHovered(false)}   // Resume animation when hover ends
+          className="flex flex-none gap-16 pr-16"
+        >
+          {[...new Array(2)].fill(0).map((_, index) => (
+            <React.Fragment key={index}>
+              {logos.map(({ url, link }, idx) => (
+                <motion.a
+                  key={idx}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.6 }}
+                  className="h-44 w-20 flex-none" // Adjusted size
+                >
+                  <img
+                    src={url}
+                    alt={`Logo ${idx + 1}`}
+                    className="h-full w-full object-contain" // Ensure the logos fit within the container
+                  />
+                </motion.a>
+              ))}
+            </React.Fragment>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

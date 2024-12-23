@@ -8,7 +8,7 @@ const NewsCard = ({ title, date, description, image, pdfUrl }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-4 flex flex-col flex-grow">
+      <div className="p-4 flex flex-col flex-grow ">
         <div>
           <h3 className="text-lg font-semibold mb-2">{title}</h3>
           <p className="text-sm text-gray-500 mb-4">{date}</p>
@@ -17,17 +17,11 @@ const NewsCard = ({ title, date, description, image, pdfUrl }) => {
         <div className="flex justify-between space-x-5 mt-auto">
           <button
             onClick={handlePdfOpen}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-          >
-            Read PDF
-          </button>
-          <a
-            href={pdfUrl}
-            download
-            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400"
+            className="hover:bg-custom-4 hover:text-white px-4 py-2 rounded-md bg-white border border-custom-1 text-custom-1"
           >
             Download 
-          </a>
+          </button>
+
         </div>
       </div>
     </div>
