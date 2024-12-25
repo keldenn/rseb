@@ -26,31 +26,57 @@ const [tableData, setTableData] = useState([
         <div className="flex-initial w-full lg:w-3/4 ">
         <div className="flex flex-col">
           {/* search and tittle */}
-            <div className=''>
-                <div className="flex flex-row m">
-                  <div className='max-w-sm w-full mx-auto m-2'>
-                  <h2 className="text-2xl font-bold text-gray-700">Stock Overview</h2>
-                  </div>
-                  {/* <div className='flex flex-row items-center'>
-                    <button type="button" class="text-custom-1 bg-white border border-custom-1  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Live Feed</button>
-                    <button type="button" class="text-grey-900 bg-white border border-grey-900  px-4 py-1 ms-2 hover:bg-custom-1 hover:text-white focus:ring-2 focus:ring-blue-300 font-medium rounded-md text-xs  dark:bg-blue-600 dark:hover:bg-custom-1 focus:outline-none dark:focus:ring-custom-1">Historical</button>
-                  </div> */}
-                {/* Search bar */}
-                <form class="max-w-sm w-full mx-auto m-2">   
-                  <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                  <div class="relative">
-                      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                          </svg>
-                      </div>
-                      <input type="search" id="default-search" class="block w-full p-2 ps-10 text-xs text-gray-900 border border-gray-300 rounded bg-gray-50  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Stocks" required />
-                      <button type="submit" class="text-white absolute end-2 bottom-1 bg-custom-1 hover:bg-blue-800  focus:outline-none focus:ring-blue-300 font-medium rounded text-xs px-2 py-1 dark:bg-blue-600 dark:hover:bg-custom-1 dark:focus:ring-blue-800">Search</button>
-                  </div>
-              </form>
+          <div className="px-4 py-6">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          {/* Stock Overview Title */}
+          <div className="w-full lg:w-auto mb-4 lg:mb-0">
+            <h2 className="text-2xl font-bold text-gray-700">Stock Overview</h2>
+          </div>
 
-                </div>
+          {/* Search Bar */}
+          <form className="w-full lg:w-auto">
+            <label
+              htmlFor="default-search"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            >
+              Search
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                className="block w-full lg:w-80 p-2 pl-10 text-xs text-gray-900 border border-gray-300 rounded bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Search Stocks"
+                required
+              />
+              <button
+                type="submit"
+                className="text-white absolute right-2 bottom-1 bg-custom-1 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded text-xs px-2 py-1 dark:bg-blue-600 dark:hover:bg-custom-1 dark:focus:ring-blue-800"
+              >
+                Search
+              </button>
             </div>
+          </form>
+        </div>
+      </div>
+
             {/* Table and Graph */}
             <div className="flex flex-wrap">
                 <div className="flex-initial w-full md:w-1/3 ">
