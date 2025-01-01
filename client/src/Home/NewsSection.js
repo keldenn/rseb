@@ -133,7 +133,7 @@ const NewsSection = () => {
     },
     {
       id: 10,
-      title: "Business: Record Growth for Small Enterprises",
+      title: "Business: Record Growth for Small",
       date: "10 November 2024",
       description: "Small and medium enterprises have recorded unprecedented growth, according to recent market data...",
       image: "https://rsebl.org.bt/agm/storage/timeline/GiaCNztmlRav3ARj3uECMX1v6c4MVk8Qeo33Ilgc.jpg",
@@ -141,7 +141,7 @@ const NewsSection = () => {
     },
     {
       id: 11,
-      title: "Environment: Conservation Efforts Highlighted",
+      title: "Environment: Conservation Efforts ",
       date: "11 November 2024",
       description: "A recent report sheds light on ongoing conservation efforts and their impact on the environment...",
       image: "https://rsebl.org.bt/agm/storage/timeline/79G6RcwLEPev5ma0pAKB8gCOUe5YpkvYyHPTZNhW.png",
@@ -181,7 +181,7 @@ const NewsSection = () => {
     },
     {
       id: 16,
-      title: "Energy: Advances in Renewable Technology",
+      title: "Energy: Advances in Renewable",
       date: "16 November 2024",
       description: "The energy sector is abuzz with innovations in renewable technology, promising a cleaner future...",
       image: "https://rsebl.org.bt/agm/storage/timeline/1zLs33Wxo3qKecmHmCUJvmDdZMmn2DsCnpSGsNhe.jpg",

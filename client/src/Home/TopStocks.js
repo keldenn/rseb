@@ -121,8 +121,13 @@ export default function TopStocks() {
 
           {/* Top Losers */}
           <div className="flex-1">
-
-            <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }}  > <h3 className="text-xl font-bold text-red-600 mb-4">Top Losers</h3> </motion.button> 
+          <h3 className="text-xl font-bold text-red-600 mb-4">Top Losers</h3>
+            {/* <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }}  > 
+            
+            
+             </motion.button>  */}
+            
+            
             <div className="grid grid-rows-2 grid-cols-2 gap-4">
               {losers.map((stock, index) => (
                 <div
@@ -137,13 +142,7 @@ export default function TopStocks() {
                     </p>
                   </div>
                   <div className="mt-4">
-                  <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  onHoverStart={() => console.log('hover started!')}
 
-                  
-                ></motion.button>
                     <TopChart
                       title={stock.companyName}
                       users={`${stock.price.toFixed(2)} BTN`}
